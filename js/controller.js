@@ -549,40 +549,40 @@ var theater =
 
    ]
  };
- function select(number){
-  $(number).addClass('selected');
-}
-$( document ).ready(function() {
-  var i,j,row,column,icon,tableBody,k,p,seatNumber;
-  tableBody = $('#seats-table').find('tbody');
-  row = $('<tr></tr>');
-  for(j=1;j<=theater.max_columns; j++){
-    column = $('<td></td>').addClass('cell');
-    p = $('<p></p>');
-    p.html(j);
-    column.append(p);
-    row.append(column);
-  }
-  tableBody.append(row);
-  for(i= 0; i<theater.seats.length;i++){
-    row = $('<tr></tr>');
-    k = 0;
-    for(j=1;j<=theater.max_columns; j++){
-      column = $('<td></td>').addClass('cell');
-      if((theater.seats[i].column[k] !== undefined ) && (theater.seats[i].column[k].location === j)){
-        seatNumber = theater.seats[i].column[k].number;
-        icon = $('<span onClick="select(this)"></span>').addClass('icon-window');
-        icon.attr('data-number',seatNumber);
-        icon.addClass('handicon');
-        icon.append()
-        column.append(icon);
-        k = k + 1;
-      };
-      row.append(column);
-    }    
-    tableBody.append(row);
-  }
-});
+//  function select(number){
+//   $(number).addClass('selected');
+// }
+// $( document ).ready(function() {
+//   var i,j,row,column,icon,tableBody,k,p,seatNumber;
+//   tableBody = $('#seats-table').find('tbody');
+//   row = $('<tr></tr>');
+//   for(j=1;j<=theater.max_columns; j++){
+//     column = $('<td></td>').addClass('cell');
+//     p = $('<p></p>');
+//     p.html(j);
+//     column.append(p);
+//     row.append(column);
+//   }
+//   tableBody.append(row);
+//   for(i= 0; i<theater.seats.length;i++){
+//     row = $('<tr></tr>');
+//     k = 0;
+//     for(j=1;j<=theater.max_columns; j++){
+//       column = $('<td></td>').addClass('cell');
+//       if((theater.seats[i].column[k] !== undefined ) && (theater.seats[i].column[k].location === j)){
+//         seatNumber = theater.seats[i].column[k].number;
+//         icon = $('<span onClick="select(this)"></span>').addClass('icon-window');
+//         icon.attr('data-number',seatNumber);
+//         icon.addClass('handicon');
+//         icon.append()
+//         column.append(icon);
+//         k = k + 1;
+//       };
+//       row.append(column);
+//     }    
+//     tableBody.append(row);
+//   }
+// });
 
 
 
