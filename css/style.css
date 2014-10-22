@@ -1,0 +1,38 @@
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+@media (min-width: 1200px)
+.container {
+width: 1170px;
+}
+@media (min-width: 992px)
+.container {
+width: 970px;
+}
+@media (min-width: 768px)
+.container {
+width: 750px;
+}
+.container {
+margin-right: auto;
+margin-left: auto;
+padding-left: 15px;
+padding-right: 15px;
+}
+.seats-container{
+  /*width: 100%;*/
+  margin-top: 15px;
+  border:1px solid black;
+  height: 600px;
+}
+.cell{
+  width: 20px;
+}
+.handicon{
+  cursor: pointer;
+}
+.selected{
+  background-color: greenyellow;
+}
