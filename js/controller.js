@@ -575,7 +575,7 @@ $( document ).ready(function() {
     row = $('<tr></tr>');
     k = 0;
     for(j=1;j<=theater.max_columns; j++){
-      column = $('<td style="padding:0px;line-height: 1.2em;" data-role="button" onClick="select(this)"></td>').addClass('cell');
+      column = $('<td style="padding:0px;line-height: 1.2em;" onClick="select(this)"></td>').addClass('cell');
       if((theater.seats[i].column[k] !== undefined ) && (theater.seats[i].column[k].location === j)){
         seatNumber = theater.seats[i].column[k].number;
         icon = $('<span></span>').addClass('icon-window');
