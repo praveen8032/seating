@@ -1,22 +1,38 @@
-<!DOCTYPE html>
-<html ng-app = 'TicketBookingApp'>
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-  <title>Ticket Booking</title>
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/movie.css">
-
+	<meta charset="UTF-8">
+	<title>Simple Sample Users PgoneGap</title>
+	<script type="text/javascript" src="phonegap-1.4.1.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<!-- debugging http://debug.phonegap.com/client/#olegflo -->
+	<script src="http://debug.phonegap.com/target/target-script-min.js#olegflo"></script>
 </head>
-<body >
-  <div >hi</div>
-<!--   // <script src="vendor/js/jquery/jquery.min.js"></script>
-  // <script src="vendor/js/jquery/jquery.cycle.lite.js"></script> -->
-  <script type="text/javascript" src= js/zepto.min.js></script>
-  <script type="text/javascript" src= js/angular.min.js></script>
-  <script type="text/javascript" src= app.js></script>
-  <!-- // <script type="text/javascript" src= js/bootstrap.min.js></script> -->
+<body onload="init();">
+	<p>PhoneGap status: <span id="phoneGapStatus"></span></p>
+	<p>Application settings:</p>
+	<ul>
+		<li>App id: <code id="appId"></code></li>
+		<li>Owner id: <code id="ownerId"></code></li>
+		<li>Auth key: <code id="authKey"></code></li>
+		<li>Auth secret: <code id="authSecret"></code></li>
+	</ul>
+	<p>Application users <span id="usersCount"></span>:</p>
+	<ul id="users"></ul>
+
+	<p>Authenticate existing user</p>
+	<p>
+		<input type="text" id="login" placeholder="Login" /><br />
+		<input type="text" id="password" placeholder="Password" /><br />
+		<input type="button" id="auth" value="Authenticate" />
+	</p>
+
+	<p>Register new user</p>
+	<p>
+		<input type="text" id="new_login" placeholder="Login" /><br />
+		<input type="text" id="new_password" placeholder="Password" /><br />
+		<input type="button" id="register" value="Register" />
+	</p>
 </body>
 </html>
